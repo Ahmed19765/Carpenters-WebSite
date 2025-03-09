@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+#BigCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-auto-rows: minmax(100px, auto); /* Each row adapts */
+    column-gap: 1vw; /* Space between grid items */
+    row-gap: 0.5vw;
+    width: 95%; /* Use a smaller width if needed */
+    align-self: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    transition: 400ms;
+}
+
+#SmallCard {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border: 1px solid black;
+    border-radius: 4px;
+    flex-direction: column;
+    height: 40vw; /* Fixed height */
+    width: 100%; /* Adjust to fill column */
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#cardPhoto {
+    display: flex;
+    width: 100%;
+    flex: 3;
+    align-self: flex-start;
+}
+
+#BigCard #SmallCard:hover {
+    transform: scale(1.01, 1.01);
+  }
+  
+  #BigCard:hover > #SmallCard:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.98, 0.98);
+  }
+
+
+
+  .rating {
+    display: flex;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+    font-size: 2vw;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #6f00ff;
+    transition: color 0.3s;
+  }
+  
+#descCard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 4 equal columns */
+    flex: 1;
+}
+
+#sType, #price, #Design{
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+}
+
+#BigCard2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#About {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #6f00ff44;
+  border-radius: 8px;
+}
+
+#Details {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+}
+
+#DescribeMe{
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+  width: 100%;
+  height: 100%;
+}
+
+#Map {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+#younPh{
+  margin-top: 4vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 50px;
+  margin-left: 2vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1.9); /* Larger blur */}
+
+#younDes{
+  display: flex;
+  padding: 3vw 0vw 3vw 3vw;
+  flex-direction: column;
+  margin-top: 2vw;
+  width: 90%;
+  height: 60%;
+  margin-bottom: 2%;
+  background-color: white;
+  border-radius: 50px;
+  margin-left: 2vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1.9); /* Larger blur */
+}
+
+.circle {
+  width:15vw; /* Adjust size as needed */
+  height: 15vw; /* Make width and height equal for a circle */
+  border-radius: 50%; /* Makes the div circular */
+  overflow: hidden; /* Ensures the image does not overflow */
+  display: flex;
+  border: solid 0.5vw rgba(0, 0, 0, 0.496);
+  justify-content: center;
+  align-items: center;
+
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+
+#Namei{
+  font-family: "Merienda", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#Cold{
+  font-family: "Varela Round", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.6vw;
+}
+
+/* From Uiverse.io by wilsondesouza */ 
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 3vw;
+
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #128c7e;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
